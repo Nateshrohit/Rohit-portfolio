@@ -1,261 +1,243 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Rohit Natesh Portfolio</title>
+  <title>Rohit Natesh | Data Analyst Portfolio</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="icon" type="image/png" href="images/profile.png" />
+  <style>
+    .spotlight::before,
+    .main.special::before {
+      display: none !important;
+    }
+
+    #intro .spotlight {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    #intro .spotlight .image img {
+      border-radius: 12px;
+      max-width: 250px;
+      height: auto;
+      box-shadow: none;
+      border: none;
+      background: none;
+    }
+
+    #intro .image::before,
+    .image::before,
+    .spotlight::before {
+      content: none !important;
+      display: none !important;
+      background: none !important;
+      box-shadow: none !important;
+    }
+
+    .image {
+      background: none !important;
+      box-shadow: none !important;
+      position: relative !important;
+    }
+
+    #intro .content {
+      flex: 1 1 400px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    #intro .button {
+      margin-top: 1.5rem;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .features li {
+      flex: 1 1 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    .features li img {
+      max-width: 100%;
+      height: 220px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .features li h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .features li p {
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .features li .button {
+      align-self: center;
+    }
+
+    .experience-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .experience-list li img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  </style>
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
 
-  <!-- Sidebar -->
-  <section id="sidebar">
-    <div class="inner">
-      <nav>
-        <ul>
-          <li><a href="#intro">Introduction</a></li>
-          <li><a href="#one">Projects</a></li>
-          <li><a href="#two">Experience</a></li>
-          <li><a href="#three">Get in touch</a></li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-
-  <!-- Wrapper -->
   <div id="wrapper">
+    <header id="header" class="alt">
+      <h1>Rohit Natesh</h1>
+      <p>Data Analyst | Power BI, Tableau, SQL, Python</p>
+    </header>
 
-    <!-- Intro -->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
-		<div class="inner" style="text-align: center;">
-			<img src="images/rohit.png" alt="Rohit Natesh"
-				 style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 4px solid white; margin-bottom: 1.5rem;" />
-			<h1 style="margin-bottom: 0.5rem;">Rohit Natesh</h1>
-			<p style="max-width: 700px; margin: 0 auto;">
-			  Data Analyst with 2+ years of experience in Power BI, Tableau, Python, and SQL.
-			  Passionate about delivering insights through analytics and machine learning.
-			</p>
-			
-		  </div>
-		  
-    </section>
+    <nav id="nav">
+      <ul>
+        <li><a href="#intro" class="active">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <!-- Projects (spotlight layout) -->
-    <section id="one" class="wrapper style2 spotlights">
-
-		<section>
-			<a href="#" class="image">
-			  <img src="images/linkedin.png" alt="LinkedIn Jobs Dashboard" data-position="center center" />
-			</a>
-			<div class="content">
-			  <div class="inner">
-				<h2>LinkedIn Job Postings Dashboard</h2>
-				<p>
-				  Analyzed over 3,400 LinkedIn job postings across Australia using Tableau.
-				  Visualized job demand by location, industries, employment types, job title frequency,
-				  and trends over time to help professionals identify hiring opportunities.
-				</p>
-				<ul class="actions">
-				  <li>
-					<a href="https://public.tableau.com/app/profile/rohit.natesh/viz/LinkedInDashboard_17320898706150/LinkedIn" target="_blank" class="button">View Dashboard</a>
-				  </li>
-				  <li>
-					<a href="https://github.com/Nateshrohit/LinkedIn" target="_blank" class="button">View Code</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </section>
-
-		<section>
-			<a href="#" class="image">
-			  <img src="images/netflix.jpg" alt="Netflix Dashboard" data-position="center center" />
-			</a>
-			<div class="content">
-			  <div class="inner">
-				<h2>Netflix Data Analysis Dashboard</h2>
-				<p>
-				  Built a Tableau dashboard to explore Netflix content distribution across countries, genres, release years, and ratings.
-				  Key insights included dominance of specific genres, global content trends, and classification breakdowns.
-				</p>
-				<ul class="actions">
-					<li>
-					  <a href="https://public.tableau.com/app/profile/rohit.natesh/viz/Netflix_17296031439000/Netflix" target="_blank" class="button">View Dashboard</a>
-					</li>
-					<li>
-					  <a href="https://github.com/Nateshrohit/Netflix" target="_blank" class="button">View Code</a>
-					</li>
-				  </ul>
-				  
-			  </div>
-			</div>
-		  </section>
-
-		  <section>
-			<a href="#" class="image"><img src="images/sales.svg" alt="Sales Dashboard" data-position="center center" /></a>
-			<div class="content">
-			  <div class="inner">
-				<h2>Sales Dashboard – Grad Careers Academy</h2>
-				<p>
-				  Developed an interactive Tableau dashboard analyzing 10,500+ sales records across multiple channels,
-				  improving agent performance tracking and customer segmentation strategies.
-				</p>
-				<ul class="actions">
-				  <li>
-					<a href="https://public.tableau.com/app/profile/rohit.natesh/viz/SalesDashboard_16988139718900/Dashboard2" target="_blank" class="button">View Dashboard</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </section>
-		  
-
-		  <section>
-			<a href="#" class="image"><img src="images/customer.png" alt="Customer Segmentation" data-position="top center" /></a>
-			<div class="content">
-			  <div class="inner">
-				<h2>Customer Segmentation Analysis</h2>
-				<p>
-				  Built a Tableau dashboard analyzing 5,000+ customer records using RFM (Recency, Frequency, Monetary) modeling.
-				  Identified high-value segments to support targeted marketing and customer retention strategies.
-				</p>
-				<ul class="actions">
-				  <li>
-					<a href="https://public.tableau.com/app/profile/rohit.natesh/viz/CustomerSegmentationDashboard_17447021522890/RFMDashboard?publish=yes" target="_blank" class="button">View Dashboard</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </section>
-		  
-
-      <section>
-		<a href="#" class="image"><img src="images/bike.webp" alt="Bike Shop" data-position="25% 25%" /></a>
-		<div class="content">
-		  <div class="inner">
-			<h2>Adventure Works Bike Shop</h2>
-			<p>
-			  Created a Power BI dashboard analyzing 15K+ transactions from a fictional bike shop dataset.
-			  Uncovered sales trends, customer behavior, and product performance to improve inventory planning and business strategy.
-			</p>
-			<ul class="actions">
-			  <li>
-				<a href="https://github.com/Nateshrohit/AdventureWorks" target="_blank" class="button">View Code</a>
-			  </li>
-			</ul>
-		  </div>
-		</div>
-	  </section>
-	  
-
-	  
-
-	  
-	  
-	  
-    </section>
-
-    <!-- Experience (card/grid layout) -->
-    <section id="two" class="wrapper style2 fade-up">
-		<div class="inner">
-		  <h2>Experience</h2>
-	  
-		  <section style="margin-bottom: 2rem;">
-			<span class="icon solid major fa-briefcase"></span>
-			<h3>Data Analyst – Grad Careers Academy</h3>
-			<p>
-			  Jan 2025 – Present<br>
-			  Developed Tableau dashboards to track 10,500+ records and agent performance, improving decision-making speed by 20%.
-			</p>
-		  </section>
-	  
-		  <section style="margin-bottom: 2rem;">
-			<span class="icon solid major fa-brain"></span>
-			<h3>Data Science Associate – Cultural Development Network</h3>
-			<p>
-			  Jul 2022 – Dec 2022<br>
-			  Built Python/NLP models to analyze public comments, reducing manual review time by 70% and surfacing key community themes.
-			</p>
-		  </section>
-	  
-		  <section style="margin-bottom: 2rem;">
-			<span class="icon solid major fa-cogs"></span>
-			<h3>Associate Engineer – Atos Global IT</h3>
-			<p>
-			  Oct 2018 – Oct 2020<br>
-			  Delivered C# and SQL solutions for UK transport, optimizing performance by 80% and maintaining integration pipelines.
-			</p>
-		  </section>
-		</div>
-	  </section>
-	  
-
-    <!-- Contact -->
-    <section id="three" class="wrapper style1 fade-up">
-      <div class="inner">
-        <h2>Get in touch</h2>
-        <div class="split style1">
-          <section>
-            <form method="post" action="https://formspree.io/f/mnnpropr">
-              <div class="fields">
-                <div class="field half">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div class="field half">
-                  <label for="email">Email</label>
-                  <input type="text" name="email" id="email" />
-                </div>
-                <div class="field">
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" rows="5"></textarea>
-                </div>
-              </div>
-              <ul class="actions">
-                <li><a href="#" class="button submit">Send Message</a></li>
-              </ul>
-            </form>
-          </section>
-          <section>
-            <ul class="contact">
-              <li>
-                <h3>Address</h3>
-                <span>Melbourne, VIC<br />Australia</span>
-              </li>
-              <li>
-                <h3>Email</h3>
-                <a href="mailto:natesh.rohit09@gmail.com">natesh.rohit09@gmail.com</a>
-              </li>
-              <li>
-                <h3>Phone</h3>
-                <span>0435 824 411</span>
-              </li>
-              <li>
-                <h3>Social</h3>
-                <ul class="icons">
-                  <li><a href="https://www.linkedin.com/in/rohitnatesh" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                  <li><a href="https://github.com/Nateshrohit" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-              </li>
+    <div id="main">
+      <section id="intro" class="main" style="padding-top: 4em;">
+        <div class="spotlight">
+          <span class="image"><img src="images/profile.png" alt="Rohit Natesh" /></span>
+          <div class="content">
+            <header class="major">
+              <h2>About Me</h2>
+            </header>
+            <p>I'm Rohit Natesh, a Data Analyst based in Melbourne with a Master's in Data Science from RMIT University. With hands-on experience in SQL, Power BI, Tableau, and Python, I enjoy solving business problems by building dashboards, automating workflows, and uncovering insights that help teams make better decisions. My journey began in IT support, and over time, I've moved into data analytics roles across industries including education, hospitality, and consulting.</p>
+            <ul class="actions">
+              <li><a href="assets/resume.pdf" class="button primary large">Download CV</a></li>
             </ul>
-          </section>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section id="projects" class="main special">
+        <header class="major">
+          <h2>Featured Projects</h2>
+        </header>
+        <ul class="features">
+          <li>
+            <img src="images/linkedin.png" alt="LinkedIn Job Postings Dashboard">
+            <h3>LinkedIn Job Postings Dashboard</h3>
+            <p>Analysed 3,400+ job postings in Australia using Tableau to uncover trends by industry, role, and location. Provided insights into hiring demand and job market patterns.</p>
+            <a href="https://public.tableau.com/app/profile/rohit.natesh/viz/LinkedInDashboard_17320898706150/LinkedIn" class="button">View Dashboard</a>
+          </li>
+          <li>
+            <img src="images/netflix.jpg" alt="Netflix Data Analysis Dashboard">
+            <h3>Netflix Data Analysis Dashboard</h3>
+            <p>Built a Tableau dashboard to explore Netflix content across countries, genres, release years, and age classifications. Helped visualise content diversity and global trends.</p>
+            <a href="https://public.tableau.com/app/profile/rohit.natesh/viz/Netflix_17296031439000/Netflix" class="button">View Dashboard</a>
+          </li>
+          <li>
+            <img src="images/sales.svg" alt="Sales Dashboard">
+            <h3>Sales Dashboard – Grad Careers Academy</h3>
+            <p>Created a Tableau dashboard analysing 10,500+ sales transactions. Improved visibility of KPIs and helped the team identify top performers and sales opportunities.</p>
+            <a href="https://public.tableau.com/app/profile/rohit.natesh/viz/SalesDashboard_16988139718900/Dashboard2" class="button">View Dashboard</a>
+          </li>
+          <li>
+            <img src="images/customer.png" alt="Customer Segmentation Analysis">
+            <h3>Customer Segmentation Analysis</h3>
+            <p>Used RFM modelling in Tableau to analyse over 5,000 customers. Identified high-value segments for targeted campaigns and retention strategies.</p>
+            <a href="https://public.tableau.com/app/profile/rohit.natesh/viz/CustomerSegmentationDashboard_17447021522890/RFMDashboard?publish=yes" class="button">View Dashboard</a>
+          </li>
+          <li>
+            <img src="images/bike.webp" alt="Bike Shop Power BI Dashboard">
+            <h3>Adventure Works Bike Shop</h3>
+            <p>Developed a Power BI dashboard analysing 15K+ sales records. Explored customer trends and product performance to support business strategy.</p>
+            <a href="https://github.com/Nateshrohit/AdventureWorks" class="button">View Code</a>
+          </li>
+          <li>
+            <img src="images/airbnb.png" alt="Airbnb Analysis Dashboard">
+            <h3>Airbnb Dashboard</h3>
+            <p>Analysed Melbourne Airbnb listings using Power BI. Visualised metrics like pricing, availability, suburb-wise performance and host activity.</p>
+            <a href="https://public.tableau.com/app/profile/rohit.natesh/viz/Airbnb_17484150954400/Dashboard1" class="button">View Dashboard</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" class="main special">
+        <header class="major">
+          <h2>Work Experience</h2>
+        </header>
+        <ul class="experience-list">
+          <li>
+            <img src="images/gradcareers.jpg" alt="Grad Careers Academy">
+            <div>
+              <h3>Data Analyst – Grad Careers Academy</h3>
+              <p>Designed dashboards in Tableau to visualise placement outcomes and education stats. Automated reports and supported decision-making for career services.</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/crown.png" alt="Crown Resorts">
+            <div>
+              <h3>Customer Service – Crown Resorts</h3>
+              <p>Delivered front-line support in a high-volume hospitality setting, managing customer queries, bookings, and service issues.</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/cdn.png" alt="Cultural Development Network">
+            <div>
+              <h3>Data Science Associate – Cultural Development Network</h3>
+              <p>Built Python/NLP models to analyse public comments, reducing manual review time by 70% and surfacing key community themes.</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/atos.jpg" alt="Atos Global IT Solutions">
+            <div>
+              <h3>Associate Engineer – Atos (IT Support – Network Rail UK)</h3>
+              <p>Provided L1 IT support, resolved SQL Server and application issues, managed user access, and built scripts to streamline manual tasks.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <footer id="footer" class="wrapper style1-alt">
-    <div class="inner">
-      <ul class="menu">
-        <li>&copy; Rohit Natesh. All rights reserved.</li>
-      </ul>
+  <section id="contact" class="main special">
+        <header class="major">
+          <h2>Let's Connect</h2>
+          <p>If you'd like to work together or have a role that suits my skills, feel free to get in touch.</p>
+        </header>
+        <footer class="major">
+          <ul class="actions special">
+            <li><a href="mailto:natesh.rohit09@gmail.com" class="button primary">Email Me</a></li>
+            <li><a href="https://www.linkedin.com/in/rohitnatesh" class="button">LinkedIn</a></li>
+          </ul>
+        </footer>
+      </section>
     </div>
-  </footer>
+  </div>
 
-  <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.scrollex.min.js"></script>
   <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -263,6 +245,5 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
-
 </body>
 </html>
